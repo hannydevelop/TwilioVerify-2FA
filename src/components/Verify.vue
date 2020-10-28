@@ -26,7 +26,9 @@ export default {
         }).then(response => {
             const errors = response.data.error;
           if (errors) {
-            console.log(errors);
+            this.$router.push({
+              name: "Verify"
+            });
           } else
             this.$router.push({
               name: "Home"
