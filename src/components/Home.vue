@@ -31,6 +31,10 @@
 </template>
 
 <style scoped>
+body{
+margin:0;
+padding:0;
+}
 .welcome{
     text-align: center;
     font-size: 50px;
