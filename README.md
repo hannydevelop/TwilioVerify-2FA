@@ -1,8 +1,8 @@
 # TwilioVerify-2FA
 
-This repository contains the source codes for a simple application built to show how to implement Twilio Verify in a MEVN Stack application. The front end of this application is located [here](https://twilioverifymevnapp.netlify.app/).
+This repository contains the source codes for a simple application built to show how to implement 2FA with Twilio Verify in a MEVN Stack application. The front end of this application is located [here](https://twilioverifymevnapp.netlify.app/).
 
-This application is built on JavaScript's framework **Vue** for it's front end, it uses Express and Node Js for it's backend and makes use of MongoDB as database. It uses MongoDB's ORM Mongoose and for deploying to production mode, it uses MongoDB Atlas.
+This application is built on JavaScript's framework **Vue** for it's front end, it uses **Express** and **Node Js** for it's backend and makes use of **MongoDB** as database. It uses MongoDB's ORM **Mongoose** and for deploying to production mode, it uses **MongoDB Atlas**.
 
 ## Project setup
 
@@ -12,7 +12,7 @@ First, clone this repository to your working environment with this command:
 Git clone https://github.com/hannydevelop/TwilioVerify-2FA.git
 ```
 
-Copy the folder ‘Backend’ into another location separate from ‘TwilioVerify-2FA’ and delete ‘Backend’ from ‘TwilioVerify-2FA’. Navigate to TwilioVerify-2FA on your terminal with this code:
+Copy the folder **‘Backend’** into another location separate from **‘TwilioVerify-2FA’** and delete **‘Backend’** from **‘TwilioVerify-2FA’**. Navigate to TwilioVerify-2FA on your terminal with this code:
 
 ```bash
 cd TwilioVerify-2FA
