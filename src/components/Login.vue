@@ -53,7 +53,7 @@ export default {
             console.log(errors);
           } else
             this.$router.push({
-              name: "Verify"
+              name: "Home"
             });
         })
     }

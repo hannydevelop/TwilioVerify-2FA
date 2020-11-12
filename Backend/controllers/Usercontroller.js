@@ -8,9 +8,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 //import config file which is holding secret keys
-const accountSid = process.env.ACCOUNTSID;
-const authToken = process.env.AUTHTOKEN;
-const client = require('twilio')(accountSid, authToken);
+
 //set variable users as expressRouter
 var users = express.Router();
 
@@ -83,32 +81,6 @@ users.post('/login', (req, res) => {
             phonenumber: user.phonenumber,
           }
 
-          require('dotenv').config();
-          client.verify.services(process.env.VERIFY)
-          .verifications
-          .create({to: payload.phonenumber, channel: 'sms'})
-          .then(verification => console.log(verification.status));
-
-          //verify code
-          users.post('/verify', (req, res) =>{
-            var veri = new Verify({
-              code: req.body.code
-          });
-          veri.save((err, doc) => {
-              if (!err) { 
-          //verify 2fa token
-          require('dotenv').config();
-          client.verify.services(process.env.VERIFY)
-          .verificationChecks
-          .create({to: user.phonenumber, code: req.body.code})
-          .then(verification_check => {
-            if (verification_check.status === 'approved'){
-            res.send(doc);}else { console.log('Error in saving product:' + JSON.stringify(err, undefined, 2)); }
-          });
-               }
-              else { console.log('Error in saving product:' + JSON.stringify(err, undefined, 2)); }
-          });
-          })
           //sign payload with jwt to get token
           let token = jwt.sign(payload, {
             expiresIn: 1440

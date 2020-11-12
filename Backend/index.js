@@ -5,7 +5,7 @@ const bodyParser = require ('body-parser');
 const Usercontroller = require('./controllers/Usercontroller');
 
 const { mong } = require('./db.js');
-const port = process.env.PORT || 5000
+const port = 3000
 
 
 var app = express();
@@ -15,5 +15,5 @@ app.use(cors());
 app.use('/uploads', express.static('uploads'));
 
 
-app.listen (port, () => console.log('server started successfully at port : 5000'));
+app.listen (port, () => console.log('server started successfully at port : 3000'));
 app.use('/users', Usercontroller);
