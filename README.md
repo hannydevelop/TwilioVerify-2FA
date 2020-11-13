@@ -1,5 +1,7 @@
 # TwilioVerify-2FA
 
+![gif.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1605249970317/WAaKbFcH5.gif)
+
 This repository contains the source codes for a simple application built to show how to implement 2FA with Twilio Verify in a MEVN Stack application. The front end of this application is located [here](https://twilioverifymevnapp.netlify.app/).
 
 This application is built on JavaScript's framework **Vue** for it's front end, it uses **Express** and **Node Js** for it's backend and makes use of **MongoDB** as database. It uses MongoDB's ORM **Mongoose** and for deploying to production mode, it uses **MongoDB Atlas**.
@@ -58,6 +60,7 @@ mongodb connected successfully
 ### Testing Application
 
 You can now test your application. The test is pretty much the same as when you host the application in a production environment. Navigate to the frontend address  http://localhost:8080/ or http://localhost:8081/, register a new user and input token sent to user before they can have access to their account. 
-The token sent to the user's phone as SMS is the same regardless if the application was hosted locally or in production mode.
+
+![sms.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1605249955025/CxvymsUUw.png)
 
 If you would want to test this application by hosting it in a production environment (Heroku/Netlify), I wrote this article for you. You can contact me on [twitter](https://twitter.com/hannydevelop) or feel free to create an issue if you have suggestions or questions concerning this repository.
